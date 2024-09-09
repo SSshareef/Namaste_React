@@ -145,7 +145,7 @@ take a search bar (throttling)
 
 npm (Node Package Manager) and npx (Node Package Executor) are two command-line tools that come with Node.js. Here's the difference:
 
-npm:
+npm:-
 
 1. Package manager: Installs, updates, and manages dependencies for your project.
 2. Global installations: Installs packages globally on your system (e.g., npm install -g).

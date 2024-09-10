@@ -1,4 +1,10 @@
-const heading = React.createElement("h1", {}, "hello world from react!");
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+const jsxHeading = <h1 id="heading">Sharif</h1>;
+
+root.render(jsxHeading);
+
+
 

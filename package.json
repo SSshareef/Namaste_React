@@ -1,0 +1,19 @@
+{
+  "name": "namaste_react",
+  "version": "1.0.0",
+  "description": "this is namaste react by shareef",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/SSshareef/Namaste_React.git)"
+  },
+  "keywords": [],
+  "author": "shareef",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

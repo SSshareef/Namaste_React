@@ -1,28 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faStar } from "@fortawesome/free-solid-svg-icons";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <img
-        className="logo"
-        src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-food-delivery-logo-design-png-image_5392526.jpg"
-      />
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const resDataObject = [
+export const resDataObject = [
   {
     info: {
       id: "23734",
@@ -1786,59 +1762,191 @@ const resDataObject = [
     },
   },
 ];
-const RestaurantCard = (props) => {
-  const { resData } = props;
 
-  const { cloudinaryImageId, name, avgRating, cuisines, areaName } =
-    resData?.info;
-  const { slaString } = resData?.info?.sla;
-  return (
-    <div className="restaurant-card">
-      <img className="restaurant-image" src={cloudinaryImageId} />
-      <div className="restaurant-info">
-        <h3>{name}</h3>
-        <div className="rating">
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <h5>{avgRating}</h5>
-          <FontAwesomeIcon icon={faCircle} className="dot" />
-          <h5>{slaString}</h5>
-        </div>
-        <p>{cuisines.join(", ")}</p>
-        <p>{areaName}</p>
-      </div>
-    </div>
-  );
-};
+///// FIXME: shareef
+[
+  {
+    statusCode: 0,
+    data: {
+      pageOffset: {
+        nextOffset: "CJhlELQ4KIC45rne59eQETCnEw==",
+        widgetOffset: {
+          NewListingView_category_bar_chicletranking_TwoRows: "",
+          NewListingView_category_bar_chicletranking_TwoRows_Rendition: "",
+          Restaurant_Group_WebView_PB_Theme: "",
+          Restaurant_Group_WebView_SEO_PB_Theme: "",
+          collectionV5RestaurantListWidget_SimRestoRelevance_food_seo: "9",
+          inlineFacetFilter: "",
+          restaurantCountWidget: "",
+        },
+      },
+      cards: [
+        {
+          card: {},
+        },
+        {
+          card: {},
+        },
+        {
+          card: {},
+        },
+        {
+          card: {},
+        },
+        {
+          card: {
+            card: {
+              "@type":
+                "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+              layout: {
+                columns: 4,
+              },
+              id: "restaurant_grid_listing",
+              gridElements: {
+                infoWithStyle: {
+                  "@type":
+                    "type.googleapis.com/swiggy.presentation.food.v2.FavouriteRestaurantInfoWithStyle",
+                  restaurants: [
+                    {
+                      info: {
+                        id: "118745",
+                        name: "McDonald's",
+                        cloudinaryImageId:
+                          "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/18/b58d3cc9-885e-42c4-aa76-3a0fa8601630_118745.jpg",
+                        locality: "Abids",
+                        areaName: "Abids",
+                        costForTwo: "₹400 for two",
+                        cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
+                        avgRating: 4.3,
+                        parentId: "630",
+                        avgRatingString: "4.3",
+                        totalRatingsString: "19K+",
+                        sla: {
+                          deliveryTime: 28,
+                          lastMileTravel: 3,
+                          serviceability: "SERVICEABLE",
+                          slaString: "25-30 mins",
+                          lastMileTravelString: "3.0 km",
+                          iconType: "ICON_TYPE_EMPTY",
+                        },
+                        availability: {
+                          nextCloseTime: "2024-09-25 04:45:00",
+                          opened: true,
+                        },
+                        badges: {},
+                        isOpen: true,
+                        type: "F",
+                        badgesV2: {
+                          entityBadges: {
+                            imageBased: {},
+                            textBased: {},
+                            textExtendedBadges: {},
+                          },
+                        },
+                        aggregatedDiscountInfoV3: {
+                          header: "₹100 OFF",
+                          subHeader: "ABOVE ₹199",
+                          discountTag: "FLAT DEAL",
+                        },
+                        differentiatedUi: {
+                          displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                          differentiatedUiMediaDetails: {
+                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                            lottie: {},
+                            video: {},
+                          },
+                        },
+                        reviewsSummary: {},
+                        displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                        restaurantOfferPresentationInfo: {},
+                        externalRatings: {
+                          aggregatedRating: {
+                            rating: "4.3",
+                            ratingCount: "2.4K+",
+                          },
+                          source: "GOOGLE",
+                          sourceIconImageId:
+                            "v1704440323/google_ratings/rating_google_tag",
+                        },
+                        ratingsDisplayPreference:
+                          "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                      },
+                    },
+                    {
+                      info: {
+                        id: "37103",
+                        name: "KFC",
+                        cloudinaryImageId:
+                          "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/76795500-8115-430e-8634-fa86dc2be090_37103.JPG",
+                        locality: "Abids",
+                        areaName: "Abids",
+                        costForTwo: "₹400 for two",
+                        cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
+                        avgRating: 4.1,
+                        parentId: "547",
+                        avgRatingString: "4.1",
+                        totalRatingsString: "15K+",
+                        sla: {
+                          deliveryTime: 25,
+                          lastMileTravel: 2.3,
+                          serviceability: "SERVICEABLE",
+                          slaString: "20-25 mins",
+                          lastMileTravelString: "2.3 km",
+                          iconType: "ICON_TYPE_EMPTY",
+                        },
+                        availability: {
+                          nextCloseTime: "2024-09-25 02:00:00",
+                          opened: true,
+                        },
+                        badges: {},
+                        isOpen: true,
+                        type: "F",
+                        badgesV2: {
+                          entityBadges: {
+                            imageBased: {},
+                            textBased: {},
+                            textExtendedBadges: {},
+                          },
+                        },
+                        aggregatedDiscountInfoV3: {
+                          header: "20% OFF",
+                          subHeader: "UPTO ₹50",
+                        },
+                        differentiatedUi: {
+                          displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                          differentiatedUiMediaDetails: {
+                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                            lottie: {},
+                            video: {},
+                          },
+                        },
+                        reviewsSummary: {},
+                        displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                        restaurantOfferPresentationInfo: {},
+                        externalRatings: {
+                          aggregatedRating: {
+                            rating: "3.9",
+                            ratingCount: "4.1K+",
+                          },
+                          source: "GOOGLE",
+                          sourceIconImageId:
+                            "v1704440323/google_ratings/rating_google_tag",
+                        },
+                        ratingsDisplayPreference:
+                          "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                      },
+                    },
+                  ],
+                  theme: "Restaurant_Group_WebView_SEO_PB_Theme",
+                  widgetType: "WIDGET_TYPE_POPULAR_BRANDS",
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="restaurant-container">
-        {resDataObject.map((eachCard) => {
-          return (
-            <div key={eachCard.id}>
-              <RestaurantCard resData={eachCard} />
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div>
-      <Header />
-      <Body />
-      <footer>
-        <p>�� 2023 My App</p>
-      </footer>
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+                  collectionId: "84124",
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+];

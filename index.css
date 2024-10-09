@@ -36,19 +36,60 @@
   list-style-type: none;
 }
 
+.login-button {
+  width: 5rem;
+  height: 2rem;
+  background-color: #0000ff;
+  color: white;
+  border: none;
+  border-radius: .3rem;
+  margin: auto 1rem;
+  cursor: pointer;
+}
+
+
+
 /* FIXME: search bar and button styling */
 
+.filter{
+  display:flex;
+}
+
+.search-box{
+  padding: 0.625rem 1rem;
+  border-radius: 0.3125rem;
+  
+}
+
+.search-button{
+  margin-left: 10px;
+  padding: 0.625rem 1rem;
+  border-radius: 0.3125rem;
+}
 .search {
   padding: 0.625rem 1rem;
   border-radius: 0.3125rem;
+
+}
+
+.filter_btn {
+  margin: 1rem;
+  padding: 0.625rem 1rem;
+  border-radius: 0.3125rem;
+  border: none;
+  outline: none;
+  background-color: #d89393;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* // FIXME: CARD STYLING */
 
 .restaurant-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 1rem;
+  grid-template-columns: auto auto auto;
+  gap: 3rem;
+  justify-content: center;
 }
 
 .restaurant-card {
@@ -76,7 +117,7 @@
   white-space: nowrap;
   width: 18.5rem;
   overflow: hidden;
-  
+
   text-overflow: ellipsis;
 }
 
@@ -87,7 +128,7 @@
   border-radius: 0.3125rem;
   transition: transform 1s linear;
 }
-.restaurant-image:hover{
+.restaurant-image:hover {
   transform: rotate(1deg);
 }
 
@@ -105,4 +146,49 @@
 .dot {
   font-size: 4px;
   margin: 0 0.5rem;
+}
+/* FIXME: shimmer card */
+.shimmer-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  justify-content: center;
+}
+.loader {
+  width: 20rem;
+  height: 15.4375rem;
+  display: block;
+  margin: 1rem;
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 2px #474646;
+}
+.loader::after {
+  content: "";
+  width: calc(100% - 30px);
+  height: calc(100% - 15px);
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%
+    ),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 16px, transparent 0),
+    linear-gradient(#ddd 50px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 175px, 100% 100px, 100% 16px, 100% 30px;
+  background-position: -185px 0, center 0, center 115px, center 142px;
+  box-sizing: border-box;
+  animation: anim-loader 1s linear infinite;
+}
+
+@keyframes anim-loader {
+  to {
+    background-position: 185px 0, center 0, center 115px, center 142px;
+  }
 }
